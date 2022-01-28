@@ -1,10 +1,12 @@
+// Step 1: Import React
 import React, { useState, useEffect } from "react";
 import Input from "../Components/input";
-import CurrentWeather from "./currentWeather";
-import ThreeDayWeather from "./ThreeDayWeather";
-import FiveDayWeather from "./FiveDayWeather";
+import CurrentWeather from "../Components/currentWeather";
+import ThreeDayWeather from "../Components/ThreeDayWeather";
+import FiveDayWeather from "../Components/FiveDayWeather";
 
-function App() {
+// Step 2: Define your component
+const IndexPage = () => {
   const [userInput, setuserInput] = useState("");
   const [weatherData, setweatherData] = useState([]);
 
@@ -39,39 +41,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <main>
       <h1>Weather Finder</h1>
       <Input handleSubmit={handleSubmit} />
-      <nav>
-        <button>
-          {" "}
-          <Link to="/">Today</Link>
-        </button>
-        <button>
-          {" "}
-          <Link to="/3day">3 Day Weather</Link>
-        </button>
-        <button>
-          {" "}
-          <Link to="/5day">5 Day Weather</Link>
-        </button>
-      </nav>
-      <Routes>
-        <Route
-          path="/"
-          element={<CurrentWeather weatherdata={weatherData} />}
-        />
-        <Route
-          path="/3day"
-          element={<ThreeDayWeather weatherdata={weatherData} />}
-        />
-        <Route
-          path="/5day"
-          element={<FiveDayWeather weatherdata={weatherData} />}
-        />
-      </Routes>
-    </div>
+      <CurrentWeather weatherdata={weatherData} />
+      <ThreeDayWeather weatherdata={weatherData} />
+      <FiveDayWeather weatherdata={weatherData} />
+    </main>
   );
-}
+};
 
-export default App;
+export default IndexPage;

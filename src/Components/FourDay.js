@@ -8,8 +8,9 @@ const FourDay = () => {
     "Friday",
     "Saturday",
   ];
-  const d = new Date();
-  let day = weekday[d.getDay() + 4];
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 3);
+  let day = weekday[tomorrow.getDay()];
   return day;
 };
 
