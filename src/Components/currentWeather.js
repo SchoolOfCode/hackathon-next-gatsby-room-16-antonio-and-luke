@@ -1,5 +1,5 @@
 import React from "react";
-import CurrentDay from "./currentDay.js";
+import CurrentDay from "./currentDay";
 
 const CurrentWeather = ({ weatherdata }) => {
   return (

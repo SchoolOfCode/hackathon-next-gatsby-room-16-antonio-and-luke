@@ -1,9 +1,9 @@
 import React from "react";
-import CurrentDay from "./currentDay.js";
-import TwoDay from "./TwoDay.js";
-import ThreeDay from "./ThreeDay.js";
-import FourDay from "./FourDay.js";
-import FiveDay from "./FiveDay.js";
+import CurrentDay from "./currentDay";
+import TwoDay from "./TwoDay";
+import ThreeDay from "./ThreeDay";
+import FourDay from "./FourDay";
+import FiveDay from "./FiveDay";
 
 const FiveDayWeather = ({ weatherdata }) => {
   return (

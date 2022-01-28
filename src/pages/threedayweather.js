@@ -3,10 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { container } from "../Components/layout.module.css";
 import Input from "../Components/input";
-import CurrentWeather from "../Components/currentWeather";
+import ThreeDayWeather from "../Components/ThreeDayWeather";
 
 // Step 2: Define your component
-const IndexPage = () => {
+const ThreeDayWeatherpage = () => {
   const [userInput, setuserInput] = useState("");
   const [weatherData, setweatherData] = useState([]);
 
@@ -45,13 +45,11 @@ const IndexPage = () => {
       <h1>Weather Finder</h1>
       <Input handleSubmit={handleSubmit} />
       <br></br>
-      <h2>Current Weather</h2>
-      <CurrentWeather weatherdata={weatherData} />
-      <Link to="/threedayweather">Three Day Weather</Link>
+      <ThreeDayWeather weatherdata={weatherData} />
       <br></br>
-      <Link to="/fivedayweather">Five Day Weather</Link>
+      <Link to="/">Current Weather</Link>
     </main>
   );
 };
 
-export default IndexPage;
+export default ThreeDayWeatherpage;
