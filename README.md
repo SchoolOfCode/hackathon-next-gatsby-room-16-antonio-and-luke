@@ -1,54 +1,68 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+# Weather App
 
-## 🚀 Quick start
+## Contents
 
-1.  **Create a Gatsby site.**
+1. Getting started
+2. Sections
+   1. Components
+   2. Pages
+3. Link to deployed site
+4. Current Issues
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+### Getting Started
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+To open the weather app code base, clone down the code base from github, as shown below.
+_NB: Code is public_
 
-2.  **Start developing.**
+Link to github: https://github.com/SchoolOfCode/hackathon-next-gatsby-room-16-antonio-and-luke
 
-    Navigate into your new site’s directory and start it up.
+![](screenshot1.png)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+_Remember to install npm i dependencies_
 
-3.  **Open the code and start customizing!**
+![](screenshot2.png)
 
-    Your site is now running at http://localhost:8000!
+### Sections
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+The below shows the structure of the weather app components and their associated functions.
 
-4.  **Learn more**
+#### Components
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Weather app
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+1. Src
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+2. Standard React JS files where components are called to the DOM, see screeshot below (_do not need to alter_)
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+![](Screenshot2.png)
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+3. Components
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+   1. App Where useState for weather data and useEffect which contains the fetch for the API that contains the weather JSON is called. _(Also where all components are called and will placed in render section so they appear in the html in the browser)_
+   2. Current Day (Component showing the current day of the week)
+   3. Current Weather (Component showing the current temp)
+   4. Five Day (Component showing the day of the week in 5 days time)
+   5. FiveDayWeather (Component showing the temp for today and the next four days)
+   6. FourDay (Component showing the day of the week in four days time)
+   7. Input (Component rendering user input text field and button)
+   8. ThreeDay (Component showing the day of the week in three days time)
+   9. ThreeDayWeather (Component showing the temp for the current day and the next two days)
+   10. TwoDay (Component showing the day of the week in two days time)
 
-## 🚀 Quick start (Gatsby Cloud)
+4. Public (contains standard React public files and the main index html where the react components will be rendered to)
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+#### Pages
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+1. fivedayweather: page rendered using gatsby - displays five day weather forecast using appropriate components and having JSON data fetched within a useEffect hook to ensure only renders on button click.
+2. index.j: page rendered using gatsby - displays current weather forecast using appropriate components and having JSON data fetched within a useEffect hook to ensure only renders on button click.
+3. threedayweather: page rendered using gatsby - displays three day weather forecast using appropriate components and having JSON data fetched within a useEffect hook to ensure only renders on button click.
+
+### Deployed Site
+
+Link to deployed site (deployed via netlify):
+
+https://whydoesitalwaysrainonme2.netlify.app/
+
+### Current Issues
+
+N/A
